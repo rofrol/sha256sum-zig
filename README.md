@@ -1,6 +1,9 @@
-## Run
+## Usage
 
-`zig build run -- /path/to/file`
+```shell
+% zig build run -- ~/Downloads/gu9m3isal4ga1.jpg
+9747fe70814f566b6ccfaf624fac8cb59d66203fbbb48fd8110eac49efdeb98e
+```
 
 ## Links
 
