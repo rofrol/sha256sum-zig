@@ -5,6 +5,14 @@
 9747fe70814f566b6ccfaf624fac8cb59d66203fbbb48fd8110eac49efdeb98e
 ```
 
+Or
+
+```shell
+% zig build
+% ./zig-out/bin/sha256sum ~/Downloads/gu9m3isal4ga1.jpg
+9747fe70814f566b6ccfaf624fac8cb59d66203fbbb48fd8110eac49efdeb98e
+```
+
 ## Links
 
 - sha256 example https://github.com/ziglang/zig/issues/13400
