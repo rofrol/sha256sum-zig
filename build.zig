@@ -15,14 +15,19 @@ pub fn build(b: *std.Build) void {
     // set a preferred release mode, allowing the user to decide how to optimize.
     const optimize = b.standardOptimizeOption(.{});
 
+    const opts = .{ .target = target, .optimize = optimize };
+    const extras = b.dependency("extras", opts).module("extras");
+
     const exe = b.addExecutable(.{
         .name = "sha256sum",
         // In this case the main source file is merely a path, however, in more
         // complicated build scripts, this could be a generated file.
         .root_source_file = .{ .path = "src/main.zig" },
-        .target = target,
-        .optimize = optimize,
+        .target = opts.target,
+        .optimize = opts.optimize,
     });
+
+    exe.addModule("extras", extras);
 
     // This declares intent for the executable to be installed into the
     // standard location when the user invokes the "install" step (the default

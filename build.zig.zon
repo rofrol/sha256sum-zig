@@ -1,0 +1,10 @@
+.{
+    .name = "sha256sum-zig",
+    .version = "0.1.0",
+    .dependencies = .{
+        .extras = .{
+            .url = "https://github.com/nektro/zig-extras/archive/6ebab3dab47268e28599ac396e785f8a76acc7b6.tar.gz",
+            .hash = "1220975525abfcdb0b655b3cafc25593531ea0f1a09d31a349793f07c6371a848467",
+        },
+    },
+}
