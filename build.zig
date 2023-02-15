@@ -16,7 +16,7 @@ pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{});
 
     const opts = .{ .target = target, .optimize = optimize };
-    const extras = b.dependency("extras", opts).module("extras");
+    const extras = b.dependency("extras", .{}).module("extras");
 
     const exe = b.addExecutable(.{
         .name = "sha256sum",
