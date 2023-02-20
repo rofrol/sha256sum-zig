@@ -13,6 +13,16 @@ Or
 9747fe70814f566b6ccfaf624fac8cb59d66203fbbb48fd8110eac49efdeb98e
 ```
 
+## Use hashFile from zig-extras
+
+I have changed to using hashFile from zig-extras after this comment by meghan (nektro):
+
+>using https://github.com/nektro/zig-extras/blob/master/src/lib.zig#L168 you can avoid the heap allocation and hash arbitrarily large inputs
+>by passing in file.reader() and hash.writer()
+>also the hasher is meant to be made an instance of as seen in https://github.com/nektro/zig-extras/blob/master/src/lib.zig#L155
+
+https://discord.com/channels/605571803288698900/1075367108516515881/1075367621689610270
+
 ## Links
 
 - sha256 example https://github.com/ziglang/zig/issues/13400
